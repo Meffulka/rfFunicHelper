@@ -19,7 +19,7 @@ api_id =  int(os.getenv('api_id'))
 api_hash = os.getenv('api_hash')
 nickname = os.getenv('nickname')
 client = TelegramClient(nickname, api_id, api_hash)
-chat_id = int(os.getenv('chat_id'))
+chat_id = os.getenv('chat_id')
 
 @client.on(events.NewMessage(chats=(577009581)))
 async def normal_handler(event):
