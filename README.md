@@ -6,6 +6,19 @@ Userbot for telegram game 'RF telegram'. Helps partyleaders to avoid encounters 
 
 ## How to run
 
+Use environment or .env
+
+### .env example
+
+```
+api_id=<you_telegram_api_id>
+api_hash='<you_telegram_api_hash>'
+chat_id=<chat_id_for_notify>
+nickname=<you_nickname>
+```
+
+### Docker
+
 build docker image:
 
 ```
@@ -22,4 +35,11 @@ another runs:
 
 ```
 docker run -d --network host --name funic_helper -v ${PWD}/<you_nickname>.session:/app/<you_nickname>.session -e api_id=<you_telegram_api_id> -e api_hash=<you_telegram_api_hash> -e chat_id=<chat_id_for_notify> -e nickname=<you_nickname> --restart=unless-stopped funic_helper
+```
+
+### Local run
+
+```
+pip3 install -r requirements.txt
+python3 ./main.py
 ```
